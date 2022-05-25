@@ -1,0 +1,19 @@
+Plan : 
+Repartition du projet endeux parties :
+- Un groupe sur le jeu en lui-même :
+  - chaque client choisit un nom d'utilisateur envoyé au serveur : récupération données joueur envoyées au client ou création du joueur alétoirement
+  - le serveur gère l'état de la partie (états des joueurs et de leurs pokemons) et envoie les données au format JSON pour permettre l'affichage 
+    de la partie aux clients
+  - le client reçoit les données de la partie en cours par le serveur, gère l'affichage en fonction de ces données, récupère l'action du joueur pour le tour,
+    évalue les données et met à jour le partie, renvoie l'état de la partie au client, puis envoie état de la partie au client adverse
+    joueur1 -> input -> serveur -> traitement données -> réponse joueur1 -> affichage -> code HTTP 200 OK -> envoie données actuelles de la partie joueur2 
+    -> début tour joueur2
+   - en cas de fin de partie, le serveur envoie dans la bdd l'état des joueurs actuel
+- Un autre goupe sur l'infra (client <-> [serveur -> bdd] <-> client)
+  - implémentation de la classe http en python
+  - le serveur exécute en tache de fond le programme python qui gère la partie et intéragit avec la bdd
+
+
+joueur1 -> input -> serveur -> traitement données -> réponse joueur1 -> affichage -> code HTTP 200 OK -> envoie données actuelles de la partie joueur2 -> début tour joueur2
+                                    
+                                 
