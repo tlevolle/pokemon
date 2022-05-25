@@ -1,0 +1,30 @@
+# Lancer une partie
+# Demander joueurs 1 et 2
+# Recuperer BDD
+    # Si joueur existe dans BDD recuperer ses pokemon avec n°1 actif
+    # Si joueur n'existe pas dans BDD lui donner 3 pokemon aleatoire avec n°1 actif
+
+# Lancer partie
+# Joueur ac pokemon actif au plus haut speed (AA) qui commence
+    # affichage de ses stats et stats advers (BDD)
+    # 3 choix 
+    # affichage de ses stats et stats advers (BDD)
+# Au tour de BB
+    # affichage de ses stats et stats advers (BDD)
+    # 3 choix 
+    # affichage de ses stats et stats advers (BDD)
+# Fin de partie 
+    # inscription resultat dans la BDD    
+
+# Fin de partie:
+    # Si un joueur fuis (1/4 chances)
+    # Si tous ces pokemon de la partie sont KO
+
+# Fin joueur:
+    # S'il a plus de pokemon dans "sa" BDD
+    # On le sort de la BDD
+    
+
+
+
+
