@@ -25,7 +25,7 @@ try:
 except ConnectionRefusedError: # echec qd le serveur n'est pas en ecoute
     print("Connexion au serveur échouée ! ")
 
-while msg != 'exit': 
+while (msg.decode("utf8")) != 'exit': 
     msg = input("Entrez un message pour continuer ou exit pour sortir: ")
     # Envoi message au serveur .send()
     # utilisation UTF-8 pour encoder/decoder le message envoye/recu du serveur
@@ -36,9 +36,9 @@ while msg != 'exit':
     # reception message -> .recv  -> (reponse.decode("utf-8")   
     reponse=connexion_serveur.recv(1024)
     print(reponse.decode("utf8"))
+    print(msg.decode("utf8"))
 
     
-
 
 # Fermer la connexion 
 print("Connexion interrompue")
