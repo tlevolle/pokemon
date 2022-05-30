@@ -1,3 +1,20 @@
+Features :
+Serveur : 
+- Les fichiers socket_client.py & socket_serveur.py sont la première itération de l'intéraction client/serveur, l'envoi d'un seul message est possible (client -> bonjour -> déconnexion)
+- Les fichiers socket_serveur_chat.py & clientA.py permettent d'envoyer plusieurs messages avec réception du serveur, accueil des clients et réponse aux clients (sans que le serveur se déconnecte. 
+  Le serveur reste en écoute et n'a pas de limitation de connexions clients (problème : impossible de déterminer qui est l'émetteur du message)
+ Jeu :
+ - Le fichier jeu.py contient la définition des classes Joueur (nom du joueur & liste de pokemons) et Pokemon (attributs du pokemon) ; le fichier joueurs_bdd.json contient la liste des
+  joueurs ayant déjà joué ou dont la première partie est en cours (TODO : bdd à reformatter en suivant le format du pokedex).
+  Le jeu en lui-même permet de récupérer le nom de joueur choisit (input utilisateur) pour voir s'il existe en BDD :
+    - si oui, on récupère ses informations depuis le joueurs_bdd.json et on envoie ces données dans nos classes
+    - si non, on choisit de manière aléatoire trois pokemons depuis notre pokedex.json et on les envoie dans nos classes
+    
+ Start :
+ - Communication : socket_srveur_chat.py & clientA.py
+ - Jeu : jeu.py
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Plan : 
 Repartition du projet endeux parties :
 - Un groupe sur le jeu en lui-même :
