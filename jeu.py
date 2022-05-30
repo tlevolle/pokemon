@@ -114,7 +114,14 @@ for joueur in data:
             # on envoie notre pokemon dans le dictionnaire de pokemon du joueur1
             joueur1.liste_pokemons[pokemon.nom_pokemon] = pokemon
         f.close()
+#TODO
 
+# liste_pokemons = []
+# for i in range 3 {
+# poke1 = random.choice(data)
+# liste_pokemons.append(Pokemon(poke1[id] etc)) 
+# }
+#
 # Si le joueur n'existe pas, on passe dans cette boucle
 if joueur_existe == False:
     # on ouvre le pokedex pour récupérer trois pokemon alétoires
