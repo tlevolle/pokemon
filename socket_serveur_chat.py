@@ -38,7 +38,7 @@ class myThread(Thread):
             #msg_out = input("Entrez la réponse du serveur ou exit pour sortir:").format(1024).encode("Utf8")
             #connexion_client.send(msg_out)
 
-            if msg_out == 'exit':
+            if msg == 'exit':
                 i=0
                 print("Fermeture de la connexion client")
                 connexion_client.send("exit".format(1024).encode("utf8"))
